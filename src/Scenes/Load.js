@@ -59,6 +59,16 @@ class Load extends Phaser.Scene {
             ],
         });
 
+        this.anims.create({
+            key: 'spin',
+            frames: this.anims.generateFrameNumbers('tilemap_sheet', {
+                start: 151,
+                end: 152
+            }),
+            frameRate: 5,
+            repeat: -1
+        })
+
          // ...and pass to the next Scene
          this.scene.start("platformerScene");
     }
